@@ -6,6 +6,7 @@ import { MainNav } from "@/components/main-nav"
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { SiteFooter } from "@/components/site-footer"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,7 +42,7 @@ export default function RootLayout({
               </div>
             </header>
             <main className="flex-1">{children}</main>
-            {/* <SiteFooter /> */}
+            <SiteFooter />
           </div>
         </ThemeProvider>  
       </body>
