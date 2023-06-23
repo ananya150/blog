@@ -7,6 +7,8 @@ import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { SiteFooter } from "@/components/site-footer"
+import { ModeToggle } from "@/components/mode-toggle"
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -28,7 +30,7 @@ export default function RootLayout({
             <header className="container z-40 bg-background">
               <div className="flex h-20 items-center justify-between py-6">
                 <MainNav items={marketingConfig.mainNav} />
-                <nav>
+                <nav className='flex items-center space-x-6'>
                   <Link
                     href="/login"
                     className={cn(
@@ -38,6 +40,7 @@ export default function RootLayout({
                   >
                     Login
                   </Link>
+                  <ModeToggle />
                 </nav>
               </div>
             </header>

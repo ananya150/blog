@@ -23,6 +23,7 @@ import {
     Twitter,
     User,
     X,
+    Menu,
     type Icon as LucideIcon,
   } from "lucide-react"
   
@@ -69,5 +70,6 @@ import {
     ),
     twitter: Twitter,
     check: Check,
+    menu: Menu
   }
   
