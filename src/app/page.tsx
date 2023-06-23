@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-// import { allPosts } from "contentlayer/generated"
+import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
 
 import { formatDate } from "@/lib/utils"
@@ -10,11 +10,11 @@ export const metadata = {
 }
 
 export default async function BlogPage() {
-  // const posts = allPosts
-  //   .filter((post) => post.published)
-  //   .sort((a, b) => {
-  //     return compareDesc(new Date(a.date), new Date(b.date))
-  //   })
+  const posts = allPosts
+    .filter((post) => post.published)
+    .sort((a, b) => {
+      return compareDesc(new Date(a.date), new Date(b.date))
+    })
 
   return (
     <div className="container max-w-4xl py-6 lg:py-10">
@@ -29,7 +29,7 @@ export default async function BlogPage() {
         </div>
       </div>
       <hr className="my-8" />
-      {/* {posts?.length ? (
+      {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
           {posts.map((post, index) => (
             <article
@@ -63,8 +63,7 @@ export default async function BlogPage() {
         </div>
       ) : (
         <p>No posts published.</p>
-      )} */}
-      <p>No posts published.</p>
+      )}
     </div>
   )
 }
